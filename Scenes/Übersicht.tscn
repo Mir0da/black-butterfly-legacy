@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://c6gdy4ujm03fd"]
+
+[ext_resource type="Script" uid="uid://c5aa5k47hbxxu" path="res://Assets/Scripts/übersicht.gd" id="1_q367s"]
+[ext_resource type="StyleBox" uid="uid://b7ptxebljm0fo" path="res://Assets/designs/bekannt.tres" id="2_q367s"]
+[ext_resource type="StyleBox" uid="uid://beepxdb7kdg8b" path="res://Assets/designs/unbekannt.tres" id="3_hd42n"]
+
+[node name="StoryOverview" type="Control" unique_id=1577274655]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+script = ExtResource("1_q367s")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=139565223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="MainContainer" type="VBoxContainer" parent="MarginContainer" unique_id=208848842]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="StoryTitle" type="Label" parent="MarginContainer/MainContainer" unique_id=365028819]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "BLACK BUTTERFLY"
+horizontal_alignment = 1
+
+[node name="StoryLine" type="HBoxContainer" parent="MarginContainer/MainContainer" unique_id=1229264171]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+offset_transform_position = Vector2(20, 20)
+theme_override_constants/separation = 50
+
+[node name="Event1" type="PanelContainer" parent="MarginContainer/MainContainer/StoryLine" unique_id=1141563841]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_q367s")
+
+[node name="Label" type="Label" parent="MarginContainer/MainContainer/StoryLine/Event1" unique_id=662952670]
+layout_mode = 2
+text = "01 - Person geht durchs Theater"
+horizontal_alignment = 1
+
+[node name="Event2" type="Button" parent="MarginContainer/MainContainer/StoryLine" unique_id=1188273781]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("3_hd42n")
+text = "02 - Wir manipulieren irgendwas"
+
+[node name="Event3" type="PanelContainer" parent="MarginContainer/MainContainer/StoryLine" unique_id=1514161690]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_q367s")
+
+[node name="Label3" type="Label" parent="MarginContainer/MainContainer/StoryLine/Event3" unique_id=1626678692]
+layout_mode = 2
+text = "03 - Upsi, Bernd ist tot"
+horizontal_alignment = 1
+
+[node name="LevelManager" type="Control" parent="." unique_id=1962131518]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="MarginContainer/MainContainer/StoryLine/Event2" to="." method="_on_event_2_pressed"]

@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://dy5g5w1f1cmd8"]
-
-[ext_resource type="PackedScene" uid="uid://cjow82r8pmjtq" path="res://models/WohnuzimmerImTheater.glb" id="1_aqsv6"]
-
-[node name="Szene1" type="Node3D" unique_id=171616519]
-
-[node name="WohnuzimmerImTheater" parent="." unique_id=1711587120 instance=ExtResource("1_aqsv6")]

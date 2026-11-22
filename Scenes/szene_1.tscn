@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://dy5g5w1f1cmd8"]
 
 [ext_resource type="PackedScene" uid="uid://cjow82r8pmjtq" path="res://models/WohnuzimmerImTheater.glb" id="1_d7e4y"]
+[ext_resource type="PackedScene" uid="uid://c1yweyg8fnrri" path="res://Scenes/player_szene.tscn" id="2_unqcp"]
 
 [node name="Szene1" type="Node3D" unique_id=171616519]
 
-[node name="WohnuzimmerImTheater" parent="." unique_id=1711587120 instance=ExtResource("1_d7e4y")]
+[node name="WohnzimmerImTheater" parent="." unique_id=1711587120 instance=ExtResource("1_d7e4y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4142928, 0.03492844, -0.55410576)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1777647784]
 transform = Transform3D(0.9116427, 0.26636684, -0.31298006, -0.061333276, 0.84118676, 0.5372554, 0.40638167, -0.47058886, 0.78319883, -2.6321688, 5.281092, 3.7207272)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1248800317]
-transform = Transform3D(1, 0, 0, 0, 0.99621034, 0.086976364, 0, -0.086976364, 0.99621034, 0, 1.4978545, 0.57704973)
-current = true
+[node name="CharacterBody3D" parent="." unique_id=1754825656 instance=ExtResource("2_unqcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0078143, -1.88)

@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://c0irk0s1qryvj"]
 
+[ext_resource type="Script" uid="uid://ci223l76tvpyl" path="res://Scenes/item.gd" id="1_n625q"]
 [ext_resource type="PackedScene" uid="uid://5tfqyf8q3wue" path="res://models/Knife/Knife.glb" id="1_yo0mk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uts8j"]
-size = Vector3(0.013, 0.02, 0.25)
+size = Vector3(0.1, 0.07, 0.35)
 
 [node name="Knife" type="RigidBody3D" unique_id=649864863 groups=["pickable"]]
+mass = 0.2
+continuous_cd = true
+script = ExtResource("1_n625q")
+item_id = "knife"
 
 [node name="KnifeModel" parent="." unique_id=958921044 instance=ExtResource("1_yo0mk")]
 

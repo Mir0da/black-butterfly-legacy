@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1yweyg8fnrri"]
 
 [ext_resource type="Script" uid="uid://bxts4jrc7eyu6" path="res://Assets/Scripts/player_szene.gd" id="1_mvvf1"]
+[ext_resource type="Script" uid="uid://cxw7jvp4ueq62" path="res://Scenes/grabber.gd" id="2_7ehtg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4v6rg"]
 radius = 0.3
@@ -13,3 +14,12 @@ shape = SubResource("CapsuleShape3D_4v6rg")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=80671062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Grabber" type="Node3D" parent="Camera3D" unique_id=1825044516]
+script = ExtResource("2_7ehtg")
+
+[node name="InteractRay" type="RayCast3D" parent="Camera3D/Grabber" unique_id=1640563021]
+target_position = Vector3(0, 0, -2.5)
+
+[node name="HoldPoint" type="Marker3D" parent="Camera3D/Grabber" unique_id=1007560000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -1)

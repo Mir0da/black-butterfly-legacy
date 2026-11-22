@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy5g5w1f1cmd8"]
 
-[ext_resource type="PackedScene" uid="uid://cjow82r8pmjtq" path="res://models/WohnuzimmerImTheater.glb" id="1_d7e4y"]
+[ext_resource type="PackedScene" uid="uid://cjow82r8pmjtq" path="res://models/Alt_Wohnzimmer/WohnuzimmerImTheater.glb" id="1_d7e4y"]
 [ext_resource type="PackedScene" uid="uid://c1yweyg8fnrri" path="res://Scenes/player_szene.tscn" id="2_unqcp"]
 
 [node name="Szene1" type="Node3D" unique_id=171616519]

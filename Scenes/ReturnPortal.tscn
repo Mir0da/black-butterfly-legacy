@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dtiylogs0eod"]
+
+[ext_resource type="Script" uid="uid://nvgoxk6kwoky" path="res://Assets/Scripts/ReturnPortal.gd" id="1_rll0t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dfipr"]
+size = Vector3(1.5, 2.5, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptb2r"]
+transparency = 1
+albedo_color = Color(0.6533715, 0.60888875, 0.85070163, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jl100"]
+size = Vector3(1.5, 2.5, 0.8)
+
+[node name="ReturnPortal" type="Area3D" unique_id=1730813803]
+collision_mask = 2
+script = ExtResource("1_rll0t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=401637976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.073)
+mesh = SubResource("BoxMesh_dfipr")
+surface_material_override/0 = SubResource("StandardMaterial3D_ptb2r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1446768563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.782)
+shape = SubResource("BoxShape3D_jl100")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

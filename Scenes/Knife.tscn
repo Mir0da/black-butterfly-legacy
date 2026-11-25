@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0irk0s1qryvj"]
 
-[ext_resource type="Script" uid="uid://ci223l76tvpyl" path="res://Scenes/item.gd" id="1_n625q"]
+[ext_resource type="Script" uid="uid://ci223l76tvpyl" path="res://Assets/Scripts/item.gd" id="1_n625q"]
 [ext_resource type="PackedScene" uid="uid://5tfqyf8q3wue" path="res://models/Knife/Knife.glb" id="1_yo0mk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uts8j"]

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c1yweyg8fnrri"]
 
 [ext_resource type="Script" uid="uid://bxts4jrc7eyu6" path="res://Assets/Scripts/player_szene.gd" id="1_mvvf1"]
-[ext_resource type="Script" uid="uid://cxw7jvp4ueq62" path="res://Scenes/grabber.gd" id="2_7ehtg"]
+[ext_resource type="Script" uid="uid://cxw7jvp4ueq62" path="res://Assets/Scripts/grabber.gd" id="2_7ehtg"]
+
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4v6rg"]
 radius = 0.3
